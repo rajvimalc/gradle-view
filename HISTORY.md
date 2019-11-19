@@ -1,3 +1,9 @@
+## 4.0.0 - 2017-11-21
+* Upgrade internal tooling API to use Gradle 2019-11-17
+* Upgrade all jar versions to latest
+* Add dependency resolution compatibility fixes to support Gradle 4.x, 5.x and 6.x
+* Java bytecode compatibility bumped up to 1.8 to support later versions of Gradle Tooling API
+
 ## 3.0.0 - 2017-11-21
 * Upgrade internal tooling API to use Gradle 3.5.1
 * Add dependency resolution compatibility fixes to support Gradle 2.x, 3.x, and 4.x

@@ -25,8 +25,18 @@
             <li>Toggle the showing of replaced dependencies</li>
         </ul>
     ]]></description>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <change-notes><![CDATA[
+
+    <p>4.0.0 - 2019-11-17
+    <ul>
+        <li>Upgrade internal tooling API to use Gradle 6.0</li>
+        <li>Upgrade all jar versions to latest</li>
+        <li>Add dependency resolution compatibility fixes to support Gradle 4.x, 5.x and 6.x</li>
+        <li>Java bytecode compatibility bumped up to 1.8 to support later versions of Gradle Tooling API</li>
+    </ul>
+    </p>
+
     <p>3.0.0 - 2017-11-21
     <ul>
         <li>Upgrade internal tooling API to use Gradle 3.5.1</li>

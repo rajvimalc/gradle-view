@@ -22,21 +22,10 @@ import com.github.rholder.gradle.log.ToolingLogger;
 import com.google.common.collect.Maps;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.exception.ExceptionUtils;
-import org.gradle.tooling.BuildAction;
-import org.gradle.tooling.BuildActionExecuter;
-import org.gradle.tooling.BuildController;
-import org.gradle.tooling.GradleConnector;
-import org.gradle.tooling.ProgressEvent;
-import org.gradle.tooling.ProgressListener;
-import org.gradle.tooling.ProjectConnection;
+import org.gradle.tooling.*;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Serializable;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -124,10 +113,11 @@ public class DependencyConversionUtil {
         InputStream input = DependencyConversionUtil.class.getResourceAsStream("/init-acumen.gradle");
 
         // replace token with extracted file, replace '\' with '/' to handle Windows paths
-        String processed = IOUtils.toString(input).replace("#ACUMEN_JAR#", extractedJarFile.getAbsolutePath()).replace("\\", "/");
+        String processed = IOUtils.toString(input, Charset.defaultCharset())
+                .replace("#ACUMEN_JAR#", extractedJarFile.getAbsolutePath()).replace("\\", "/");
         input.close();
 
-        InputStream processedInput = IOUtils.toInputStream(processed);
+        InputStream processedInput = IOUtils.toInputStream(processed, Charset.defaultCharset());
 
         OutputStream output = new BufferedOutputStream(new FileOutputStream(outputFile));
         IOUtils.copy(processedInput, output);

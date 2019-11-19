@@ -39,8 +39,8 @@ for details.
 ### add Gradle build variables
 Create a custom `gradle.properties` file in the root directory and add a tooling version to use, as in:
 
-    gradleToolingApiVersion=3.5.1
-    ideaPluginJdkName=IDEA IU-135.690
+    gradleToolingApiVersion=6.0
+    ideaPluginJdkName=Java 8
 
 The `ideaPluginJdkName` should be the version you have referenced in your IntelliJ IDE.
 
