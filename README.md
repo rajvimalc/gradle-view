@@ -11,7 +11,7 @@ omitted if it is explicitly being included).
 ![Gradle View](http://plugins.jetbrains.com/files/7150/screenshot_14710.png)
 
 ## Features
- * Built on the [Gradle Tooling API 3.5.1](https://docs.gradle.org/3.5.1/userguide/embedding.html), but should work on most 1.x, 2.x, 3.x, and 4.x versions
+ * Built on the [Gradle Tooling API 6.0], should work on most 4.x, 5.x and 6.x versions
  * Visual highlighting to indicate dependencies in use and replacement versions
  * Lexicographically sorted listing for all Gradle configurations
  * Load any project's Gradle dependencies, not just the one currently open inside IntelliJ
