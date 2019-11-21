@@ -2,15 +2,14 @@
 .idea/*
 !.idea/runConfigurations/
 
-/.gradle/
+.gradle/
 
-/build/
-/gradle-acumen/build/
-/gradle-acumen-api/build/
+gradle-acumen/build/
+gradle-acumen-api/build/
 
-/out/
-/gradle-acumen/out/
-/gradle-acumen-api/out/
+out/
+gradle-acumen/out/
+gradle-acumen-api/out/
 
 *.class
 *.log
@@ -18,7 +17,6 @@
 *.war
 *.nar
 *.ear
-*.zip
 *.tar.gz
 *.rar
 
@@ -27,3 +25,6 @@
 *.iws
 
 Thumbs.db
+
+build/*
+!build/distributions/
